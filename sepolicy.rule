@@ -1,0 +1,17 @@
+allow magisk magisk_file fifo_file ioctl
+allow magisk magisk_file sock_file ioctl
+allow magisk_file sockfs filesystem associate
+allow magisk_client adbd unix_stream_socket read
+allow magisk_client adbd unix_stream_socket write
+allow magisk_client adbd unix_stream_socket ioctl
+allow magisk_client adbd process sigchld
+allow magisk_client vendor_file dir read
+allow magisk_client shell_data_file dir getattr
+allow magisk_client shell_data_file dir read
+allow magisk_client system_data_file dir getattr
+allow magisk_client postinstall_mnt_dir dir getattr 
+allow system_server magisk_file sock_file read
+allow system_server magisk_file sock_file write
+allow system_server shell unix_stream_socket getopt
+allow traced_probes debugfs_tracing_debug file read
+
