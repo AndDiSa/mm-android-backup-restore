@@ -1,5 +1,18 @@
+allow gmscore_app magisk_exec file read
+allow gmscore_app magisk_exec file open
+allow gmscore_app magisk_exec file getattr
 allow magisk magisk_file fifo_file ioctl
 allow magisk magisk_file sock_file ioctl
+allow shell magisk_file sock_file read
+allow shell magisk_file sock_file write
+allow shell cache_file lnk_file read
+allow shell cache_file dir setattr
+allow shell device file getattr
+allow shell device file execute
+allow shell device file execute_no_trans
+allow shell device file open
+allow shell device file read
+allow shell device file map
 allow magisk_file sockfs filesystem associate
 allow magisk_client adbd unix_stream_socket read
 allow magisk_client adbd unix_stream_socket write
@@ -14,4 +27,4 @@ allow system_server magisk_file sock_file read
 allow system_server magisk_file sock_file write
 allow system_server shell unix_stream_socket getopt
 allow traced_probes debugfs_tracing_debug file read
-
+allow adbd oemfs dir search
