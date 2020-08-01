@@ -28,3 +28,5 @@ allow system_server magisk_file sock_file write
 allow system_server shell unix_stream_socket getopt
 allow traced_probes debugfs_tracing_debug file read
 allow adbd oemfs dir search
+allow untrusted_app_27 property_socket sock_file write
+

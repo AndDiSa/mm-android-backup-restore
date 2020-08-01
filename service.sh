@@ -8,4 +8,8 @@
 	MODPATH=${0%/*}
 	BOOTSTAGE="post"
 
-	/data/adb/magisk/magiskpolicy --live --apply $MODPATH/sepolicy.rule
+	if [ "`ls /sbin/magiskpolicy`" ==  "/sbin/magiskpolicy" ]; then
+		/sbin/magiskpolicy --live --apply $MODPATH/sepolicy.rule
+	else
+		/data/adb/magisk/magiskpolicy --live --apply $MODPATH/sepolicy.rule
+	fi
