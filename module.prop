@@ -1,7 +1,7 @@
 id=AndroidBackupRestore
 name=Magisk Module Android Backup and Restore Support
-version=v0.2
-versionCode=2
+version=v0.3
+versionCode=3
 author=AndDiSa
 description=Magisk Module Android Backup and Restore Support
 support=https://anddisa.de/
